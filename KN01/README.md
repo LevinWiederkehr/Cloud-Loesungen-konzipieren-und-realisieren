@@ -1,6 +1,7 @@
 # Hypervisor – Übersicht
 
-Ein **Hypervisor** ermöglicht es, mehrere virtuelle Maschinen (VMs) auf einem einzigen physischen Rechner auszuführen. Dabei verwaltet er die Ressourcen wie CPU, Speicher und Speicherplatz.
+Ein **Hypervisor** ermöglicht es, mehrere virtuelle Maschinen (VMs) auf einem einzigen physischen Rechner auszuführen.
+Dabei verwaltet er die Ressourcen wie CPU, Speicher und Speicherplatz.
 
 ## Typen von Hypervisoren
 

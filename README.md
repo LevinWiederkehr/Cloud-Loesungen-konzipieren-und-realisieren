@@ -1,6 +1,6 @@
 # Ordnerübersicht
 
-Willkommen! Diese Repository enthält 10 Ordner mit verschiedenen Inhalten. Klicke auf die Links unten, um zu den jeweiligen Ordnern zu gelangen.
+Cloud Lösungen konzipieren und realisieren
 
 ## Ordnerliste
 
