@@ -26,7 +26,7 @@ Dabei verwaltet er die Ressourcen wie CPU, Speicher und Speicherplatz.
 # Hypervisor-Typ-Test und Ressourcenanalyse
 
 ## Vermutung des Hypervisor-Typs
-Wir vermuten, dass unser System einen **Hypervisor Typ 2** verwendet, da wir eine Virtualisierungssoftware (VMware Workstation) auf einem bestehenden Betriebssystem nutzen.
+Wir vermuten, dass unser System einen **Hypervisor Typ 2** verwendet, da wir unsere VM (VMware Workstation) auf einem bestehenden Betriebssystem nutzen.
 
 ---
 
@@ -48,23 +48,21 @@ Wir vermuten, dass unser System einen **Hypervisor Typ 2** verwendet, da wir ein
 ## Ergebnisse
 
 ### CPU-Test
-- [Screenshot einfügen]  
-- Ergebnis: [Beschreiben, ob mehr Prozessoren zugewiesen werden konnten oder eine Fehlermeldung angezeigt wurde.]
+Anzahl Prozessoren - Fehlermeldung:
+![alt Anzahl Prozessoren: Fehlermeldung](ProzessorAnzahl.jpg) 
+
+---
 
 ### RAM-Test
-- [Screenshot einfügen]  
-- Ergebnis: [Beschreiben, ob mehr RAM zugewiesen werden konnte oder eine Fehlermeldung angezeigt wurde.]
+Anzahl RAM - Fehlermeldung: 
+![alt Ergebnis: Fehlermeldung](Error_More_RAM_Than_Host.jpg)
 
 ---
 
 ## Erklärung und Fazit
 
 ### Warum gibt es Fehlermeldungen?  
-Falls keine zusätzlichen Ressourcen zugewiesen werden konnten, liegt dies daran, dass der Hypervisor nur die verfügbaren Ressourcen des Host-Systems nutzen kann. Dies bestätigt, dass es sich um einen Typ-2-Hypervisor handelt, der keine direkte Hardwaresteuerung hat.
+Es liegt daran, dass der Hypervisor nur die verfügbaren Ressourcen unseres Host-Systems nutzen kann. Das bestätig, dass es sich um einen Typ-2-Hypervisor handelt, der keine direkte Hardwaresteurung hat.
 
-### Wie ist Überzuweisung möglich?  
-Falls mehr Ressourcen zugewiesen werden konnten, ist dies durch **Overcommitment** möglich. Der Hypervisor emuliert Ressourcen, die physisch nicht vorhanden sind, was jedoch die Stabilität beeinträchtigen kann.
-
-### Fazit  
-- Unsere Vermutung, dass es sich um einen **Hypervisor Typ 2** handelt, wurde [bestätigt/nicht bestätigt].  
-- [Kurze Begründung auf Basis der Tests].
+### Kuzes Fazit  
+Unsere Vermutung, dass es sich um einen **Hypervisor Typ 2** handelt, wurde bestätigt.  
