@@ -22,7 +22,7 @@ Cloud Lösungen konzipieren und realisieren
 6. [KN06](./KN06)  
    TEST
 
-7. [KN07 - Forschungsartikel](./KN07)  
+7. [KN07](./KN07)  
    TEST
 
 8. [KN08](./KN08)  
