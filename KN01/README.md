@@ -38,7 +38,7 @@ Wir vermuten, dass unser System einen **Hypervisor Typ 2** verwendet, da wir uns
   - **RAM:** [Anzahl in GB eintragen]
 
 ### 2. Virtuelle Maschine erstellen
-- **Erstellte VM:** [Name des Betriebssystems, z. B. Ubuntu]  
+- **Erstellte VM:** Ubuntu 
 - **Zugewiesene Ressourcen:**
   - Prozessoren: Mehr als die verfügbaren logischen Prozessoren des Host-Systems.  
   - RAM: Mehr als den verfügbaren RAM des Host-Systems.  
@@ -51,11 +51,17 @@ Wir vermuten, dass unser System einen **Hypervisor Typ 2** verwendet, da wir uns
 Anzahl Prozessoren - Fehlermeldung:
 ![alt Anzahl Prozessoren: Fehlermeldung](ProzessorAnzahl.jpg) 
 
+lspu | grep "CPU(s)"
+![alt lscpu | grep "CPU(s)"](lscpu.jpg)
+
 ---
 
 ### RAM-Test
 Anzahl RAM - Fehlermeldung: 
 ![alt Ergebnis: Fehlermeldung](Error_More_RAM_Than_Host.jpg)
+
+free -h
+![alt free -h](freeH.jpg)
 
 ---
 
