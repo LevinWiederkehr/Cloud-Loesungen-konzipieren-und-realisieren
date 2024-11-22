@@ -8,7 +8,7 @@ Cloud Lösungen konzipieren und realisieren
    Virtualisierung
 
 2. [KN02](./KN02)  
-   TEST
+   Virtuelle Server
 
 3. [KN03](./KN03)  
    TEST
