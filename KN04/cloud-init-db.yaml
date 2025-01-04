@@ -17,6 +17,4 @@ runcmd:
   - sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/mariadb.conf.d/50-server.cnf
   - sudo systemctl restart mariadb
   - sudo systemctl enable mariadb
-  - mysql -e "CREATE USER IF NOT EXISTS 'admin'@'%' IDENTIFIED BY 'password';"
-  - mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION;"
-  - mysql -e "FLUSH PRIVILEGES;"
+  - sudo mysql -sfu root -e "GRANT ALL ON . TO 'admin'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;"
