@@ -1,0 +1,15 @@
+#cloud-config
+users:
+  - name: ubuntu # Benutzername
+    sudo: ALL=(ALL) NOPASSWD:ALL # sudo-Regeln für den Benutzer
+    groups: users, admin # Benutzer wird zu den Gruppen users und admin hinzugefügt
+    home: /home/ubuntu # Der Home-Ordner des Benutzers wird unter "/home/ubuntu" erstellt.
+    shell: /bin/bash # Die Standard-Shell ist die Bash-Shell.
+    ssh_authorized_keys: # Liste der SSH-Keys.
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDH2iiTSin4OXNkTpSmuSzuAQKCfRzkSpWus+NFJcSmlYWFCrSwIsJ+fTeC0g/BPi/zU5CdP5hrAeTBkThvgP8mjDOARdGZCi1izNSm2rb/R9J3AW+F8q/QoHtZCZfWSitJg4F4xbPwf5J02xLbH0CJo58xyKTc09ZZKIettU7xgqhFYOlgPIoz+EkZtJgcnYuuuIqnXPWbcdGzbJCQrJ8ylhJ2Fg7+p9YMK2VT+lUlLMgDU75Wv2P51UpS9WJyF4zw8eDsFNjq3o50UbeOGDcsdwVSyaOfL/IJsl05vGTmQnXdzWJ0KY3HmKcKEp+wKxg31DfDY2dA1WWm8z7x1JlT aws-key       
+ssh_pwauth: false  # Passwort-Authentifizierung deaktiviert, nur SSH-Keys erlaubt.
+disable_root: false # Root-Zugang ist erlaubt.
+package_update: true # Liste der verfügbaren Pakete wird vor der Installation aktualisiert.
+packages: # Liste der zu installierenden Softwarepakete.
+  - curl # Werkzeug, um Daten von oder zu einem Server zu übertragen (z. B. HTTP, FTP).
+  - wget # Ein Kommandozeilen-Downloader für Dateien.

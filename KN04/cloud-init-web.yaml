@@ -1,0 +1,49 @@
+#cloud-config
+users:
+  - name: ubuntu
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users, admin
+    home: /home/ubuntu
+    shell: /bin/bash
+    ssh_authorized_keys: # Liste der SSH-Keys.
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDH2iiTSin4OXNkTpSmuSzuAQKCfRzkSpWus+NFJcSmlYWFCrSwIsJ+fTeC0g/BPi/zU5CdP5hrAeTBkThvgP8mjDOARdGZCi1izNSm2rb/R9J3AW+F8q/QoHtZCZfWSitJg4F4xbPwf5J02xLbH0CJo58xyKTc09ZZKIettU7xgqhFYOlgPIoz+EkZtJgcnYuuuIqnXPWbcdGzbJCQrJ8ylhJ2Fg7+p9YMK2VT+lUlLMgDU75Wv2P51UpS9WJyF4zw8eDsFNjq3o50UbeOGDcsdwVSyaOfL/IJsl05vGTmQnXdzWJ0KY3HmKcKEp+wKxg31DfDY2dA1WWm8z7x1JlT aws-key
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDyWyGTDzzqq9YjuMqsrcXRMhZVrCbD+cnL2YLpTLbTli2jXcX6mISWVzrPQWEkF5OPWCVtWpUpyEgjwe7m7E5zvpI0bGiPrdzrPmO5SMhFI0gRJK5VdJEVl59XColb4ueqh3cwvpbX2kMV8fq04WY+So8mGFlZ+EB+SdvWkgdzde0KOoX8pZQje/rD6GpHF9Jjul075D1kmlS4aUlUmGkM3c6Z5j/phLjyTRayKOD/dZyTEVSGZaS9csd3Qu/b98qoH9VpvG7+ri+RNMh3IYkIpORJjhlCxxvb6uTR89WcvNT94kNBA0GUECQkguElLjx9WSR0RwimfOv4b+Ewj/sX tbz_aws_atilgan
+
+package_update: true
+packages:
+  - apache2
+  - php
+  - php-mysql
+  - git
+  - adminer
+
+write_files:
+  - path: /var/www/html/index.html
+    content: |
+      <html>
+        <head><title>Webserver</title></head>
+        <body>
+          <h1>Willkommen auf Levins Webserver!</h1>
+        </body>
+      </html>
+  - path: /var/www/html/info.php
+    content: |
+      <?php
+        phpinfo();
+      ?>
+  - path: /var/www/html/db.php
+    content: |
+      <?php
+        $mysqli = new mysqli("54.152.94.97", "admin", "password", "testdb");
+
+        if ($mysqli->connect_error) {
+          die("Verbindung fehlgeschlagen: " . $mysqli->connect_error);
+        }
+        echo "Erfolgreich mit der Datenbank verbunden!";
+        $mysqli->close();
+      ?>
+
+runcmd:
+  - sudo a2enconf adminer
+  - sudo systemctl restart apache2
+  - sudo systemctl enable apache2
