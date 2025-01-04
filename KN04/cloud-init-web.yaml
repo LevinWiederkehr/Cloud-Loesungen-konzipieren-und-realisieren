@@ -13,9 +13,9 @@ package_update: true
 packages:
   - apache2
   - php
-  - php-mysql
-  - git
+  - php-mysqli
   - adminer
+  - libapache2-mod-php
 
 write_files:
   - path: /var/www/html/index.html
@@ -33,15 +33,35 @@ write_files:
       ?>
   - path: /var/www/html/db.php
     content: |
+      <html>
+      <head></head>
+      <body>
+      Diese Seite macht eine Abfrage auf die Datenbank. <br />
+      Das ausgeführte Query ist: <i>select Host, User from mysql.user;</i><br /><br />
+      Das Resultat: <br />
       <?php
-        $mysqli = new mysqli("54.152.94.97", "admin", "password", "testdb");
+              //database
+              $servername = "IPDannVonAdminServer";
+              $username = "admin";
+              $password = "password";
+              $dbname = "mysql";
 
-        if ($mysqli->connect_error) {
-          die("Verbindung fehlgeschlagen: " . $mysqli->connect_error);
-        }
-        echo "Erfolgreich mit der Datenbank verbunden!";
-        $mysqli->close();
+              // Create connection
+              $conn = new mysqli($servername, $username, $password, $dbname);
+              // Check connection
+              if ($conn->connect_error) {
+                      die("Connection failed: " . $conn->connect_error);
+              }
+
+              $sql = "select Host, User from mysql.user;";
+              $result = $conn->query($sql);
+              while($row = $result->fetch_assoc()){
+                      echo("<li>" . $row["Host"] . " / " . $row["User"] . "</li>");
+              }
+              //var_dump($result);
       ?>
+      </body>
+      </html>     
 
 runcmd:
   - sudo a2enconf adminer
