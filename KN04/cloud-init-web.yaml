@@ -41,9 +41,9 @@ write_files:
       Das Resultat: <br />
       <?php
               //database
-              $servername = "IPDannVonAdminServer";
+              $servername = "98.80.71.24";
               $username = "admin";
-              $password = "password";
+              $password = "levin1234";
               $dbname = "mysql";
 
               // Create connection
