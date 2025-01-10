@@ -11,10 +11,10 @@ Cloud Lösungen konzipieren und realisieren
    Virtuelle Server
 
 3. [KN03](./KN03)  
-   TEST
+   Virtuelle Server
 
 4. [KN04](./KN04)  
-   TEST
+   Cloud-init und AWS
 
 5. [KN05](./KN05)  
    TEST
