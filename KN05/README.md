@@ -50,3 +50,9 @@ Eine feste, unveränderliche IP-Adresse, die einer Ressource dauerhaft zugewiese
 ## Subnetz-Liste
 
 ![Subnetz-Liste](SubnetzListe.png)
+
+![Sicherheitsgruppen](Sicherheitsgruppen.png)
+
+![Inbound-Regeln_WEB](Inbound-Regeln_WEB.png)
+
+![Inbound-Regeln_DB](Inbound-Regeln_DB.png)
