@@ -17,7 +17,7 @@ Cloud Lösungen konzipieren und realisieren
    Cloud-init und AWS
 
 5. [KN05](./KN05)  
-   TEST
+   Netzwerk / Sicherheit
 
 6. [KN06](./KN06)  
    TEST
