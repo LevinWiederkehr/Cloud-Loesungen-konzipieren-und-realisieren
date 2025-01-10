@@ -28,7 +28,4 @@
 - ![alt Aufruf index.html](Aufruf_Index-html.png)
 - ![alt Aufruf info.php](Aufruf_Info-php.png)
 - ![alt Aufruf db.php](Aufruf_Db-php.png)
-
-   - **Screenshots**:
-     - Aufruf von `index.html`, `info.php`, und `db.php` (URL und Inhalt sichtbar).
-     - Verbindung zu Adminer (`http://<IP>/adminer/`) und Verbindung zum DB-Server.
+- ![alt Zugriff adminer](Zugriff_Adminer.png)
