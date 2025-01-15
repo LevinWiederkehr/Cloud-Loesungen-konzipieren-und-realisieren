@@ -20,19 +20,19 @@ Cloud Lösungen konzipieren und realisieren
    Netzwerk / Sicherheit
 
 6. [KN06](./KN06)  
-   TEST
+   Skalierung
 
 7. [KN07](./KN07)  
-   TEST
+   PAAS
 
 8. [KN08](./KN08)  
-   TEST
+   FaaS und Backup
 
 9. [KN09](./KN09)  
-   TEST
-
+   Automation
+   
 10. [KN10](./KN10)  
-    TEST
+    Kostenberechnung
 
 ---
 
