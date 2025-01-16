@@ -10,24 +10,24 @@ dieses Dokument bietet eine Übersicht zu den Kosten und dem Aufwand der Cloud-M
 ### Infrastructure-as-a-Service (IaaS)
 #### Amazon Web Services (AWS)
 - **Webserver**: 12,99 €/Monat
-![Webserver](KostenBerechnung_Webserver_AWS.png)
+![Webserver](Kostenberechnung_Webserver_AWS.png)
 - **Datenbank**: 193,99 €/Monat
-![Datenbank](KostenBerechnung_Datenbank_AWS.png)
+![Datenbank](Kostenberechnung_Datenbank_AWS.png)
 - **Backup**: 35,20 €/Monat
-![Backup_1](KostenBerechnung_Backup_AWS_1.png)
-![Backup_2](KostenBerechnung_Backup_AWS_2.png)
-![Backup_3](KostenBerechnung_Backup_AWS_3.png)
+![Backup_1](Kostenberechnung_Backup_AWS_1.png)
+![Backup_2](Kostenberechnung_Backup_AWS_2.png)
+![Backup_3](Kostenberechnung_Backup_AWS_3.png)
 - **Gesamtkosten**: 242,18 €/Monat
 
 #### Microsoft Azure
 - **Webserver**: 12,29 €/Monat
-![Webserver_1](KostenBerechnung_Webserver_Azure_1.png)
-![Webserver_2](KostenBerechnung_Webserver_Azure_2.png)
+![Webserver_1](Kostenberechnung_Webserver_Azure_1.png)
+![Webserver_2](Kostenberechnung_Webserver_Azure_2.png)
 - **Datenbank**: 143,37 €/Monat
-![Datenbank_1](KostenBerechnung_Webserver_Azure_1.png)
-![Datenbank_2](KostenBerechnung_Webserver_Azure_2.png)
+![Datenbank_1](Kostenberechnung_Webserver_Azure_1.png)
+![Datenbank_2](Kostenberechnung_Webserver_Azure_2.png)
 - **Backup**: 39,60 €/Monat
-![Backup](KostenBerechnung_Backup_Azure.png)
+![Backup](Kostenberechnung_Backup_Azure.png)
 - **Gesamtkosten**: 195,26 €/Monat
 
 ### Platform-as-a-Service (PaaS)
