@@ -1,4 +1,4 @@
-# README: Kostenvergleich und Bewertung von Cloud-Migrationsstrategien
+# Kostenvergleich und Bewertung von Cloud-Migrationsstrategien
 
 Herr Atilgan,
 dieses Dokument bietet eine Übersicht zu den Kosten und dem Aufwand der Cloud-Migrationsstrategien (IaaS, PaaS, SaaS) sowie meine Bewertung zu den Optionen basierend auf unseren bisherigen Anforderungen.
