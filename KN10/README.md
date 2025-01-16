@@ -31,34 +31,30 @@ dieses Dokument bietet eine Übersicht zu den Kosten und dem Aufwand der Cloud-M
 - **Gesamtkosten**: 195,26 €/Monat
 
 ### Platform-as-a-Service (PaaS)
-- **Heroku**: Kosten variieren je nach Nutzung (siehe Detaildokumentation).
+- **Heroku**:
+- Production wurde gewählt, da es für unserere Lösung reicht und die Kosten am geringsten sind. Kosten: 50 €/Monat
 ![Heroku_1](Heroku_1.png)
+- Hier wurde die Standard-Option gewählt, da es mit unseren Anforderungen übereinstimmt, skalierbar ist und der Preis am geringsten ist. Für 30 Benutzer ist das ausreichend. Kosten: 50 €/Monat
 ![Heroku_2](Heroku_2.png)
+- Auch hier wurde die Standard-Version gewählt, da sie für unsere Lösung ausreicht. Backups sind im Plan enthalten.
 ![Heroku_3](Heroku_3.png)
+- Bei Bedarf kann man den Logging/Monitoring-Zusatzdienst hinzufügen, falls Sie Protokolle und Fehlerverfolgungen möchten. Das wären dann nochmal 10 €/Monat.
+- **Gesamtkosten**: 110 €/Monat
 
 ### Software-as-a-Service (SaaS)
 #### Zoho CRM
 - **Kosten**: 690 €/Monat (23 €/User für 30 User)
 ![ZohoCRM](ZohoCRM_Auswahlmöglichkeiten.png)
+- Empfohlener Plan: Professional
+- Bietet alle wichtigen CRM-Funktionen, mit einbeschlossen Automatisierungen.
+- Gute Balance zwischen Kosten und Funktionen
 
 #### Salesforce
 - **Kosten**: 750 €/Monat (25 €/User für 30 User)
 ![SalesForce](SalesForce_Auswahlmöglichkeiten.png)
-
----
-
-## Aufwand für die Firma
-
-### IaaS (AWS, Azure)
-- Höherer technischer Aufwand (z. B. Einrichtung, Datenmigration, Verwaltung).
-
-### PaaS (Heroku)
-- Reduzierter Verwaltungsaufwand durch automatisierte Plattformdienste.
-- Anpassungen möglich, aber eingeschränkte Kontrolle.
-
-### SaaS (Zoho CRM, Salesforce)
-- Minimaler technischer Aufwand.
-- Fokus auf Schulung und Workflow-Integration.
+- Empfohlener Plan: Starter Suite
+- Grundlegende CRM-Funktionen sind enthalten, welche unseren Anforderungen entsprechen.
+- Kostengünstigste Option
 
 ---
 
@@ -70,8 +66,8 @@ dieses Dokument bietet eine Übersicht zu den Kosten und dem Aufwand der Cloud-M
 - Der Webserver ist einfach konfiguriert und dient eigentlich nur zur Bereitstellung der Anwendung.
 
 #### Cloud-Komponente:
-- **AWS**: Amazon EC2 (t3.small: 2 vCPUs, 2 GiB RAM).
-- **Azure**: Virtual Machine (B1ms: 1 vCPU, 2 GB RAM, 4 GB Temporary Storage, S4 32 GiB, Saving Plan 3 Jahre).
+- **AWS**: Amazon EC2 (t3.small: 2 vCPUs, 2 GiB RAM, Reservierungslaufzeit 3 Jahre).
+- **Azure**: Virtual Machine (B1ms: 1 vCPU, 2 GB RAM, 4 GB Temporary Storage, S4 32 GiB, Saving Plan 3 Jahre (~45% Rabatt)).
 
 #### Abweichungen und Gründe:
 - Die kleinsten verfügbaren Instanzen in der Cloud sind meistens leistungsstärker und bieten mehr Ressourcen (z. B. 2 vCPUs bei AWS).
@@ -88,7 +84,7 @@ dieses Dokument bietet eine Übersicht zu den Kosten und dem Aufwand der Cloud-M
 
 #### Cloud-Komponente:
 - **AWS**: Amazon RDS (db.t3.medium: 2 vCPUs, 4 GiB RAM, 100 GB Storage).
-- **Azure**: Azure SQL Database (General Purpose, 2 vCores, 4 GB RAM, 100 GB Speicher).
+- **Azure**: Azure SQL Database (General Purpose, 2 vCores, 4 GB RAM, 100 GB Speicher, Savings Plan 3 Years reserved, Azure Hybrid Benefit SQL-Licence).
 
 #### Abweichungen und Gründe:
 - **Managed Service**:
@@ -128,25 +124,68 @@ dieses Dokument bietet eine Übersicht zu den Kosten und dem Aufwand der Cloud-M
 - **Sicherheit und Redundanz**:
   - Cloud-Backups werden in verteilten Regionen gespeichert, was bei On-Premise nicht möglich ist.
 
-### 4. Skalierbarkeit und Verfügbarkeit
-#### On-Premise Infrastruktur:
-- Die Ressourcen waren festgelegt, ohne Skalierungsmöglichkeiten.
-- Bei Ausfällen mussten die Hardware-Reparaturen manuell erledigt werden.
+---
 
-#### Cloud-Komponente:
-- Cloud-Instanzen und Services sind skalierbar und bieten eine hohe Verfügbarkeit (z. B. durch Multi-AZ bei RDS oder Azure SQL).
+## Aufwand für die Firma
 
-#### Abweichungen und Gründe:
-- **Automatisches Scaling**:
-  - Cloud-Ressourcen können bei Bedarf automatisch erhöht oder verringert werden, was bei On-Premise nicht möglich ist.
-- **Redundanz**:
-  - Durch Cloud-Regionen und Verfügbarkeitszonen werden Ausfallzeiten minimiert.
+### AWS, Azure (IaaS)
+- Höherer technischer Aufwand für uns (z. B. Einrichtung, Datenmigration, Verwaltung).
+
+### Heroku (PaaS)
+- Reduzierter Verwaltungsaufwand durch automatisierte Plattformdienste.
+- Anpassungen wären möglich, aber wir haben nur eingeschränkte Kontrolle.
+
+### Zoho CRM, Salesforce (SaaS)
+- Minimaler technischer Aufwand.
+- Der Fokus liegt auf Schulung und der Workflow-Integration.
+
+### Erklärung der Unterschiede im Aufwand
+1. **Technische Anforderungen:**
+   - **AWS, Azure:** Höherer technischer Aufwand, da die gesamte Infrastruktur manuell auf die Cloud migriert werden muss. Anpassungen und fortlaufende Wartung bleiben Aufgabe von uns.
+   - **Heroku:** Reduziert den Aufwand durch vorgefertigte Plattformdienste, erfordert jedoch Anpassungen an bisher bestehende Anwendungen.
+   - **Zoho CRM und Salesforce:** Minimiert den technischen Aufwand, da die Infrastruktur vollständig von den Anbietern verwaltet wird.
+
+2. **Schulung und Einarbeitung:**
+   - Zoho CRM und Salesforce erfordern eine Einarbeitung der Mitarbeiter in neue Workflows und Funktionen.  
+   - AWS und Azure benötigen keine Endbenutzerschulung, erfordern jedoch mehr Aufwand für unsere IT-Abteilung.
+
+3. **Langfristige Wartung:**
+   - **AWS, Azure und Heroku:** Die Firma trägt weiterhin die Verantwortung für Updates, Sicherheit und Optimierungen.
+   - **Zoho CRM und Salesforce:** Updates und Wartung werden vollständig vom Anbieter übernommen.
 
 ---
 
-## Fazit
-- **Günstigste Optionen**: Azure (IaaS) und Zoho CRM (SaaS).
-- **Minimaler Aufwand**: SaaS (Zoho CRM, Salesforce).
-- **Langfristige Flexibilität**: AWS oder Azure (IaaS).
+## Vergleich nach Kosten
 
-Die Wahl der Strategie sollte von den Anforderungen an Kosten, Aufwand und langfristige Flexibilität abhängen.
+- **AWS (Rehosting)**: 242,18 €/Monat
+- **Azure (Rehosting)**: 195,26 €/Monat
+- **Heroku (Replatforming)**: 110€/Monat
+- **Zoho CRM (SaaS)**: 690€/Monat
+- **Salesforce (SaaS)**: 750€/Monat
+
+### Warum sind die Kosten unterschiedlich?
+1. **Flexibilität vs. Fertige Lösung:**
+   - **AWS, Azure, Heroku:** Man zahlt nur für die genutzte Infrastruktur. Diese Lösungen erfordern zusätzliche Arbeit für Anpassungen, Verwaltung und Wartung, was die Kosten sinkt, aber langfristige Betriebskosten hinzufügt.
+   - **Zoho, Salesforce:** SaaS-Lösungen beinhalten fertige Funktionen und minimale Administrationsarbeit, was die Grundkosten erhöht, jedoch den Aufwand für uns reduziert.
+
+2. **Angebot und Spezialisierung:**
+   - **AWS und Azure** bieten nahezu identische Infrastrukturkomponenten. Unterschiede in den Kosten kommen durch die Preisgestaltung, die Support-Optionen und sdie pezifischen Dienste zustande.
+   - **Heroku** bietet eine benutzerfreundliche Entwicklerplattform, was unseren Aufwand reduziert, jedoch teurer ist als reine Cloud-Dienste.
+   - **Zoho CRM und Salesforce** bieten hochspezialisierte CRM-Funktionen. Salesforce verlangt höhere Preise, bietet aber mehr Anpassungsmöglichkeiten.
+
+3. **Skalierung und Zusatzdienste:**
+   - AWS und Azure bieten größere Flexibilität und Skalierbarkeit, haben jedoch dann zusätzliche Kosten für Management, Datenverkehr und Sicherheitsfeatures.
+   - wie Zoho CRM und Salesforce haben diese Features in ihren Plänen, sind jedoch weniger flexibel in Bezug auf Anpassungen.
+
+---
+
+- **Günstigste Optionen**: Heroku und Azure.
+- **Minimalster Aufwand**: Zoho CRM und Salesforce.
+- **Langfristige Flexibilität**: AWS oder Azure.
+
+---
+
+## Meine Empfehlung
+- Wenn ihr die **Flexibilität** und die Kontrolle wichtig ist, würde ich AWS oder Azure wählen.  
+- Wenn ihr Fokus auf **geringem Aufwand** und schnellem Zugang zu einem CRM liegt, würde ich **Zoho CRM** wählen, da es kostengünstiger als Salesforce ist und alle erforderlichen Funktionen bietet.  
+- Für eine Mischung aus moderatem Aufwand und fertigen Entwicklungsumgebungen empfehle ich **Heroku**.
