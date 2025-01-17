@@ -186,6 +186,6 @@ dieses Dokument bietet eine Übersicht zu den Kosten und dem Aufwand der Cloud-M
 ---
 
 ## Meine Empfehlung
-- Wenn ihr die **Flexibilität** und die Kontrolle wichtig ist, würde ich AWS oder Azure wählen. Wenn es dann noch um den Preis geht, würde ich Azure empfehlen.  
+- Wenn ihr die **Flexibilität** und die Kontrolle wichtig ist, würde ich **AWS** oder **Azure** wählen. Wenn es dann noch um den Preis geht, würde ich **Azure** empfehlen.  
 - Wenn ihr Fokus auf **geringem Aufwand** und schnellem Zugang zu einem CRM liegt, würde ich **Zoho CRM** wählen, da es kostengünstiger als Salesforce ist und alle erforderlichen Funktionen bietet.  
 - Für eine Mischung aus moderatem Aufwand und fertigen Entwicklungsumgebungen empfehle ich **Heroku**.

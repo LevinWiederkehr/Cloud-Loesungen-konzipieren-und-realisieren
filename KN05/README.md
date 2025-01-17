@@ -56,3 +56,15 @@ Eine feste, unveränderliche IP-Adresse, die einer Ressource dauerhaft zugewiese
 ![Inbound-Regeln_WEB](Inbound-Regeln_WEB.png)
 
 ![Inbound-Regeln_DB](Inbound-Regeln_DB.png)
+
+![Elastic_IP](Elastic_IP.png)
+
+![Instanz_DB](Instanz-DB.png)
+
+![Instanz_WEB](Instanz-WEB.png)
+
+![Index-html](Index-html.png)
+
+![Info_php](Info-php.png)
+
+![Db_php](Db-php.png)
