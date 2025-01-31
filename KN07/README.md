@@ -1,15 +1,17 @@
 # KN07: PAAS
 
+## A) Datenbank im PAAS Modell
+
 ![Datenbankabfrage](Datenbankabfrage.png)
 
-## Wieso PAAS/SAAS anstatt einer eigenen Datenbank?
+### Wieso PAAS/SAAS anstatt einer eigenen Datenbank?
 
 - Die Wartung, Sicherstellung der Verfügbarkeit und das Skalieren der Datenbank wird von den Anbietern übernommen.
 - Die Kosten für Mitarbeiter, die sich um die Server kümmern, sind wahrscheinlich höher als die Kosten für eine PAAS oder SAAS Datenbank.
 
----
+## B) PAAS Applikation erstellen
 
-## Veränderte Bereiche:
+### Veränderte Bereiche:
 
 ### Datenbankabfrage
 ![Datenbank festlegen](Datenbankfestlegen.png)
@@ -39,9 +41,9 @@ Wir aktivieren das Monitoring für die Applikation und stellen dieses auf "Erwei
 ![Managed Platform Updates aktivieren](ManagedPlatformUpdates.png)
 Mit den erweiterten Monitoring-Einstellungen können wir die Managed Platform Updates aktivieren.
 
----
+## B) Erstellte Ressourcen/Objekte und ColoudFormation
 
-## Was ist CloudFormation?
+### Was ist CloudFormation?
 AWS CloudFormation ist ein Service, der es ermöglicht, Infrastruktur als Code zu erstellen und zu verwalten. Mit CloudFormation können Sie eine Vorlage erstellen, die die Ressourcen und Konfigurationen definiert, die Sie in Ihrer AWS-Umgebung bereitstellen möchten. Sie können die Vorlage dann verwenden, um die Infrastruktur in Ihrer AWS-Umgebung zu erstellen und zu verwalten.
 
 ### Erstellte Instanz
