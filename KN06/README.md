@@ -49,3 +49,15 @@ Um die Webserver mit der URL app.tbz-m346.ch zu erreichen, müsste man einen CNA
 Hier sieht man noch, dass der Load Balancer funktioniert.
 
 ![Bild](Bild9.png)
+
+
+## D) Auto Scaling
+
+### Auto Scaling:
+Passt automatisch die Anzahl der Instanzen je nach Bedarf an, um die Leistung zu optimieren und Kosten zu sparen.
+
+### Health Checks:
+Überprüfen regelmässig, ob Instanzen funktionsfähig sind. Ungesunde Instanzen werden nicht genutzt.
+
+### Load Balancer:
+Verteilt den eingehenden Traffic gleichmässig auf mehrere Instanzen, um Überlastungen zu vermeiden und die Verfügbarkeit zu sichern.
